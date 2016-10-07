@@ -1,0 +1,59 @@
+namespace :foreman do
+  desc 'Export the Procfile to Ubuntu upstart scripts'
+  task :export do
+    on roles(:app) do |host|
+      log_path = shared_path.join('log')
+      #environment_path = fetch(:deploy_env)
+
+     # ref: http://ddollar.github.io/foreman/
+      within release_path do
+        execute :mv, ".env .hidenv"
+        execute :echo, "'RACK_ENV=#{fetch(:deploy_env)}' >> .env"
+        execute :echo, "'RAILS_ENV=#{fetch(:deploy_env)}' >> .env"
+        as :root do
+           # execute :bundle, "exec foreman export upstart #{shared_path}/init -a #{fetch(:application)} -u #{host.user} -l #{log_path} -e #{environment_path}"
+          execute :bundle, "exec foreman export upstart #{shared_path}/init -a #{fetch(:application)} -u #{host.user} -l #{log_path} -t 'upstart'"
+
+#          -e #{fetch(:deploy_env)}
+
+        end
+        execute :rm, ".env"
+        execute :mv, ".hidenv .env"
+       
+        as :root do
+          execute :cp, "#{shared_path}/init/* /etc/init/"
+        end
+      end
+    end
+  end
+
+  desc 'Start the application services'
+  task :start do
+    on roles(:app) do |host|
+      as :root do
+        execute :start, fetch(:application)
+      end
+    end
+  end
+
+  desc 'Stop the application services'
+  task :stop do
+    on roles(:app) do |host|
+      as :root do
+        execute :stop, fetch(:application)
+      end
+    end
+  end
+
+  desc 'Restart the application services'
+  task :restart do
+    on roles(:app) do |host|
+	  sudo :stop, "#{fetch(:application)}"
+	  sudo  :start, "#{fetch(:application)}"
+#      as :root do
+#        execute :service, "#{fetch(:application)} start || service #{fetch(:application)} #restart"
+#      end
+    end
+  end
+  
+end
