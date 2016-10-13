@@ -1,4 +1,4 @@
-server '', port: 22, roles: [:web, :app, :db], primary: true
+server 'mobizard.com', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:pracdev/testing-deploy.git'
 set :application,     'testing-deploy'

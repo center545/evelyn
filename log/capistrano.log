@@ -1,0 +1,37 @@
+# Logfile created on 2016-10-13 14:00:08 +0200 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-13 14:00:08 +0200 cap hello:production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e4d73fde] Running [ -d ~/.rvm ] on 
+ DEBUG [e4d73fde] Command: [ -d ~/.rvm ]
+ DEBUG [e4d73fde] Finished in 61.142 seconds with exit status 0 (successful).
+ DEBUG [2dc3245e] Running ~/.rvm/bin/rvm version on 
+ DEBUG [2dc3245e] Command: ~/.rvm/bin/rvm version
+ DEBUG [2dc3245e] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [2dc3245e] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [6dc4b02f] Running ~/.rvm/bin/rvm current on 
+ DEBUG [6dc4b02f] Command: ~/.rvm/bin/rvm current
+ DEBUG [6dc4b02f] 	ruby-2.2.2
+ DEBUG [6dc4b02f] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [8911720b] Running ~/.rvm/bin/rvm default do ruby --version on 
+ DEBUG [8911720b] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [8911720b] 	ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
+ DEBUG [8911720b] 	
+ DEBUG [8911720b] Finished in 0.960 seconds with exit status 0 (successful).
+  INFO [2aebd0ca] Running /usr/bin/env mkdir -p /tmp on 
+ DEBUG [2aebd0ca] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2aebd0ca] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 100.0%
+  INFO [4adfd220] Running /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh on 
+ DEBUG [4adfd220] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh
+  INFO [4adfd220] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [89e8d16d] Running /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git on 
+ DEBUG [89e8d16d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testing-deploy-production-dev.sh" ; /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git )
+ DEBUG [89e8d16d] 	1bb703ec4eb786db7301eeeb2e6654ebde56ad28	refs/heads/master
+  INFO [89e8d16d] Finished in 13.741 seconds with exit status 0 (successful).
+  INFO [e10dc1e4] Running /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases on 
+ DEBUG [e10dc1e4] Command: /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases
+ DEBUG [e10dc1e4] 	mkdir: cannot create directory ‘/home/deployer’
+ DEBUG [e10dc1e4] 	: Permission denied
+ DEBUG [e10dc1e4] 	mkdir: cannot create directory ‘/home/deployer’: Permission denied
