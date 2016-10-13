@@ -3,6 +3,7 @@ GEM
   specs:
     airbrussh (1.1.1)
       sshkit (>= 1.6.1, != 1.7.0)
+    caphub (0.1.5)
     capistrano (3.6.1)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -21,10 +22,14 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     i18n (0.7.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
+    puma (3.6.0)
     rake (11.3.0)
     sshkit (1.11.3)
       net-scp (>= 1.1.2)
@@ -34,14 +39,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (~> 3.6, >= 3.6.1)
-  capistrano-bundler (~> 1.2)
+  caphub
+  capistrano
+  capistrano-bundler
   capistrano-multiconfig (~> 3.0, >= 3.0.10)
-  capistrano-rails (~> 1.1, >= 1.1.8)
-  capistrano-rvm (~> 0.1.2)
+  capistrano-rails
+  capistrano-rvm
+  capistrano3-puma
 
 RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.5
+   1.13.3

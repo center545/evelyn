@@ -1,16 +1,13 @@
-# TODO: configure the remote server name and user info
-server "example.com", user: "deployer", roles: %w[ web app db ]
+server '', port: 22, roles: [:web, :app, :db], primary: true
 
+set :repo_url,        'git@github.com:pracdev/testing-deploy.git'
+set :application,     'testing-deploy'
+set :user,            'deployer'
+set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :linked_files, %w{config/database.yml config/application.yml .env}
+set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :branch, 'master' # ask :branch, 'master'
-set :linked_files, %w[ .env ] 
-
-set :application, proc { fetch(:stage).split(':').reverse[1] }
-# TODO: define the correct git repo url
-set :repo_url, proc { "git@github.com:evelyn/hello_world.git" }
-#TODO: define the correct user path location below
-set :deploy_to, proc { "/home/deployer/#{fetch(:application)}" }
 set :foreman_export_path, "/home/deployer/#{fetch(:application)}/shared/init"
-
 
 after 'deploy:updated', 'deploy:compile_assets'
 after 'deploy:updated', 'deploy:normalize_assets'
