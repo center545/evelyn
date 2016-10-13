@@ -40,3 +40,91 @@
   INFO ---------------------------------------------------------------------------
  DEBUG [dd8b8fa2] Running [ -d ~/.rvm ] on mobizard.com
  DEBUG [dd8b8fa2] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-13 14:23:41 +0200 cap hello:production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fedc9e15] Running [ -d ~/.rvm ] on mobizard.com
+ DEBUG [fedc9e15] Command: [ -d ~/.rvm ]
+ DEBUG [fedc9e15] Finished in 16.021 seconds with exit status 0 (successful).
+ DEBUG [e0c34fca] Running ~/.rvm/bin/rvm version on mobizard.com
+ DEBUG [e0c34fca] Command: ~/.rvm/bin/rvm version
+ DEBUG [e0c34fca] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [e0c34fca] 	
+ DEBUG [e0c34fca] Finished in 10.775 seconds with exit status 0 (successful).
+ DEBUG [84c1661a] Running ~/.rvm/bin/rvm current on mobizard.com
+ DEBUG [84c1661a] Command: ~/.rvm/bin/rvm current
+ DEBUG [84c1661a] 	ruby-2.3.0
+ DEBUG [84c1661a] 	
+ DEBUG [84c1661a] Finished in 1.878 seconds with exit status 0 (successful).
+ DEBUG [6b55f491] Running ~/.rvm/bin/rvm default do ruby --version on mobizard.com
+ DEBUG [6b55f491] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6b55f491] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [6b55f491] 	
+ DEBUG [6b55f491] Finished in 2.915 seconds with exit status 0 (successful).
+  INFO [a22e3da1] Running /usr/bin/env mkdir -p /tmp on mobizard.com
+ DEBUG [a22e3da1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a22e3da1] Finished in 1.468 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 100.0%
+  INFO [52b5f9d6] Running /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh on mobizard.com
+ DEBUG [52b5f9d6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh
+  INFO [52b5f9d6] Finished in 1.364 seconds with exit status 0 (successful).
+  INFO [86c39827] Running /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git on mobizard.com
+ DEBUG [86c39827] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testing-deploy-production-dev.sh" ; /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git )
+ DEBUG [86c39827] 	1bb703ec4eb786db7301eeeb2e6654ebde56ad28
+ DEBUG [86c39827] 		
+ DEBUG [86c39827] 	refs/heads/master
+  INFO [86c39827] Finished in 3.650 seconds with exit status 0 (successful).
+  INFO [07980bb3] Running /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases on mobizard.com
+ DEBUG [07980bb3] Command: /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases
+ DEBUG [07980bb3] 	mkdir: 
+ DEBUG [07980bb3] 	cannot create directory ‘/home/deployer’
+ DEBUG [07980bb3] 	: Permission denied
+ DEBUG [07980bb3] 	
+ DEBUG [07980bb3] 	mkdir: 
+ DEBUG [07980bb3] 	cannot create directory ‘/home/deployer’
+ DEBUG [07980bb3] 	: Permission denied
+ DEBUG [07980bb3] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-13 14:29:53 +0200 cap hello:production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8eadb3ad] Running [ -d ~/.rvm ] on mobizard.com
+ DEBUG [8eadb3ad] Command: [ -d ~/.rvm ]
+ DEBUG [8eadb3ad] Finished in 14.480 seconds with exit status 0 (successful).
+ DEBUG [c78a8395] Running ~/.rvm/bin/rvm version on mobizard.com
+ DEBUG [c78a8395] Command: ~/.rvm/bin/rvm version
+ DEBUG [c78a8395] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [c78a8395] 	
+ DEBUG [c78a8395] Finished in 12.452 seconds with exit status 0 (successful).
+ DEBUG [43d0da7e] Running ~/.rvm/bin/rvm current on mobizard.com
+ DEBUG [43d0da7e] Command: ~/.rvm/bin/rvm current
+ DEBUG [43d0da7e] 	ruby-2.3.0
+ DEBUG [43d0da7e] 	
+ DEBUG [43d0da7e] Finished in 3.064 seconds with exit status 0 (successful).
+ DEBUG [5357f663] Running ~/.rvm/bin/rvm default do ruby --version on mobizard.com
+ DEBUG [5357f663] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [5357f663] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [5357f663] 	
+ DEBUG [5357f663] Finished in 2.967 seconds with exit status 0 (successful).
+  INFO [c776b7f0] Running /usr/bin/env mkdir -p /tmp on mobizard.com
+ DEBUG [c776b7f0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c776b7f0] Finished in 3.164 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testing-deploy-production-dev.sh 100.0%
+  INFO [6f4426cc] Running /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh on mobizard.com
+ DEBUG [6f4426cc] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testing-deploy-production-dev.sh
+  INFO [6f4426cc] Finished in 1.224 seconds with exit status 0 (successful).
+  INFO [17887555] Running /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git on mobizard.com
+ DEBUG [17887555] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testing-deploy-production-dev.sh" ; /usr/bin/env git ls-remote --heads git@github.com:pracdev/testing-deploy.git )
+ DEBUG [17887555] 	1bb703ec4eb786db7301eeeb2e6654ebde56ad28	refs/heads/master
+  INFO [17887555] Finished in 6.277 seconds with exit status 0 (successful).
+  INFO [6b7786a2] Running /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases on mobizard.com
+ DEBUG [6b7786a2] Command: /usr/bin/env mkdir -p /home/deployer/apps/testing-deploy/shared /home/deployer/apps/testing-deploy/releases
+ DEBUG [6b7786a2] 	mkdir: 
+ DEBUG [6b7786a2] 	cannot create directory ‘/home/deployer’
+ DEBUG [6b7786a2] 	: Permission denied
+ DEBUG [6b7786a2] 	
+ DEBUG [6b7786a2] 	mkdir: 
+ DEBUG [6b7786a2] 	cannot create directory ‘/home/deployer’
+ DEBUG [6b7786a2] 	: Permission denied
+ DEBUG [6b7786a2] 	
