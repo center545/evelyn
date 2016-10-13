@@ -35,3 +35,8 @@
  DEBUG [e10dc1e4] 	mkdir: cannot create directory ‘/home/deployer’
  DEBUG [e10dc1e4] 	: Permission denied
  DEBUG [e10dc1e4] 	mkdir: cannot create directory ‘/home/deployer’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-13 14:19:04 +0200 cap hello:production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [dd8b8fa2] Running [ -d ~/.rvm ] on mobizard.com
+ DEBUG [dd8b8fa2] Command: [ -d ~/.rvm ]
